@@ -17,10 +17,13 @@ public class gui {
 
     }
     public gui(){
+
+
         startB.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 wilkommentext.setVisible(false);
+                startB.setVisible(false);
                 FHButton.setVisible(false);
             }
         });
