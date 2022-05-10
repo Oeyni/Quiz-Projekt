@@ -3,6 +3,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class gui {
+
+    main Frage = new main();
     private JButton FHButton;
     private JButton startB;
     private JTextField wilkommentext;
@@ -34,15 +36,19 @@ public class gui {
                 startB.setVisible(false);
                 FHButton.setVisible(false);
                 antwort1.setVisible(true);
+                antwort1.setText(Frage.sAntwort_1);
                 antwort2.setVisible(true);
+                antwort2.setText(Frage.sAntwort_2);
                 antwort3.setVisible(true);
+                antwort3.setText(Frage.sAntwort_3);
                 antwort4.setVisible(true);
+                antwort4.setText(Frage.sAntwort_4);
             }
         });
         antwort1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                antwort1.setText("Hallo");
+                antwort1.setText(Frage.sFrage_Text);
             }
         });
     }
