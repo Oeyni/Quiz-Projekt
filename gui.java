@@ -29,10 +29,12 @@ public class gui {
         antwort2.setVisible(false);
         antwort3.setVisible(false);
         antwort4.setVisible(false);
+        frageTextField.setVisible(false);
+
         startB.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                wilkommentext.setVisible(false);
+                frageTextField.setVisible(true );
                 startB.setVisible(false);
                 FHButton.setVisible(false);
                 antwort1.setVisible(true);

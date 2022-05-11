@@ -17,7 +17,7 @@ public class main {
         mysql.maxID();
         System.out.println(iFrage_ID);
         mysql.select();
-        //gui.main(args);
+        gui.main(args);
 
     }
 
