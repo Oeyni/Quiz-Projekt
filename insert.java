@@ -24,7 +24,7 @@ public class insert {
             //
             statement = (Statement) connection.createStatement();
             //Mysql Insert
-            String sql = "INSERT INTO fragen (Frage_Text)"+"VALUES('Test5')";
+            String sql = "INSERT INTO fragen (Frage_Text)"+"VALUES('Test69')";
             //Führt den Insert aus
             statement.executeUpdate(sql);
             //Ausgabe, wenn Insert Erfolgreich war
