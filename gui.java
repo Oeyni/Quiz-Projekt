@@ -31,6 +31,7 @@ public class gui {
         frame.setVisible(true);
 
     }
+
     public gui() {
         antwort1.setVisible(false);
         antwort2.setVisible(false);
@@ -40,9 +41,9 @@ public class gui {
         frageTextField2.setVisible(false);
 
 
+        for (int i = 0; i <= 5; i++) {
             mysql.select();
             startB.addActionListener(new ActionListener() {
-
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     frageTextField2.setVisible(true);
@@ -50,19 +51,30 @@ public class gui {
 
                     startB.setVisible(false);
                     FHButton.setVisible(false);
+
                     antwort1.setVisible(true);
                     antwort1.setText(Frage.sAntwort_1);
+
+
                     antwort2.setVisible(true);
                     antwort2.setText(Frage.sAntwort_2);
+
+
                     antwort3.setVisible(true);
                     antwort3.setText(Frage.sAntwort_3);
+
+
                     antwort4.setVisible(true);
                     antwort4.setText(Frage.sAntwort_4);
+
                 }
             });
+        }
             antwort1.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+
+
                     if (antwort1wert == Frage.iRichtige_Antwort) {
                         antwort.richtig();
                     } else {
@@ -73,11 +85,14 @@ public class gui {
             antwort2.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+
                     if (antwort2wert == Frage.iRichtige_Antwort) {
+
                         antwort.richtig();
 
 
                     } else {
+
                         antwort.falsch();
 
 
@@ -97,6 +112,7 @@ public class gui {
             antwort4.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+
                     if (antwort4wert == Frage.iRichtige_Antwort) {
                         antwort.richtig();
 
@@ -107,8 +123,8 @@ public class gui {
                 }
             });
 
-        }
+
+
 
     }
-
-
+}
