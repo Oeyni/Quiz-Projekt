@@ -8,16 +8,18 @@ public class main {
     static String sAntwort_3 = "A 3";
     static String sAntwort_4 = "A 4";
 
-    int iRichtige_Antwort;
+    static int i;
+
+    static int iRichtige_Antwort;
 
     //GUI Starten
     public static void main(String[] args)
     {
-
         mysql.maxID();
         System.out.println(iFrage_ID);
         mysql.select();
         gui.main(args);
+
 
     }
 

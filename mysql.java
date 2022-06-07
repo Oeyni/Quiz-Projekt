@@ -1,7 +1,11 @@
 import javax.print.DocFlavor;
 import java.sql.*;
+import java.util.Random;
 
 public class mysql {
+
+    //randomizer für Select
+    static private int maxidrandom;
 
 
     //Methode um mit Datenbank zu verbinden
@@ -17,6 +21,7 @@ public class mysql {
 
 
             if(rs1.next()){
+                maxidrandom = rs1.getInt(1);
                 Frage.iFrage_ID=rs1.getInt(1);
                 System.out.println(Frage.iFrage_ID);
             }
@@ -27,11 +32,14 @@ public class mysql {
         }
 
     }
+
     public static void select(){
 
+        Random rand = new Random();
+        int n = rand.nextInt(maxidrandom)+1;
         main Frage = new main();
 
-        String sqlSelectall ="SELECT * FROM fragen WHERE Frage_ID LIKE 3";
+        String sqlSelectall ="SELECT * FROM fragen WHERE Frage_ID LIKE " + n + "";
         String conURL ="jdbc:mysql://localhost:3306/quiz_start";
 
         try(Connection conn = DriverManager.getConnection(conURL,"root","");
