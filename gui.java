@@ -15,6 +15,8 @@ public class gui {
     private JButton antwort2;
     private JButton antwort3;
 
+    private JLabel frageTextField2;
+
     public static void main(String[] args) {
         JFrame frame = new JFrame("gui");
         frame.setContentPane(new gui().gui);
@@ -29,12 +31,14 @@ public class gui {
         antwort2.setVisible(false);
         antwort3.setVisible(false);
         antwort4.setVisible(false);
-        frageTextField.setVisible(false);
+        frageTextField.setVisible(false);frageTextField2.setVisible(false);
 
         startB.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                frageTextField.setVisible(true );
+                frageTextField2.setVisible(true);
+                frageTextField2.setText(Frage.sFrage_Text);
+
                 startB.setVisible(false);
                 FHButton.setVisible(false);
                 antwort1.setVisible(true);
@@ -50,7 +54,7 @@ public class gui {
         antwort1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                antwort1.setText(Frage.sFrage_Text);
+             //   antwort1.setText(Frage.sFrage_Text);
             }
         });
     }
