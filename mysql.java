@@ -49,6 +49,8 @@ public class mysql {
                 System.out.println(Frage.sAntwort_3);
                 Frage.sAntwort_4=rs2.getString(6);
                 System.out.println(Frage.sAntwort_4);
+                Frage.iRichtige_Antwort=rs2.getInt(7);
+                System.out.println(Frage.iRichtige_Antwort);
             }
         }catch (SQLException e){
 
