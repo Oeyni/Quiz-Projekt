@@ -4,7 +4,7 @@ import java.awt.event.ActionListener;
 
 public class gui {
 
-    main Frage = new main();
+    Main Frage = new Main();
     private JButton FHButton;
     private JButton startB;
     private JTextField wilkommentext;
@@ -42,7 +42,7 @@ public class gui {
 
 
         for (int i = 0; i <= 5; i++) {
-            mysql.select();
+            Mysql.select();
             startB.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -76,9 +76,9 @@ public class gui {
 
 
                     if (antwort1wert == Frage.iRichtige_Antwort) {
-                        antwort.richtig();
+                        Antwort.richtig();
                     } else {
-                        antwort.falsch();
+                        Antwort.falsch();
                     }
                 }
             });
@@ -88,12 +88,12 @@ public class gui {
 
                     if (antwort2wert == Frage.iRichtige_Antwort) {
 
-                        antwort.richtig();
+                        Antwort.richtig();
 
 
                     } else {
 
-                        antwort.falsch();
+                        Antwort.falsch();
 
 
                     }
@@ -103,9 +103,9 @@ public class gui {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     if (antwort3wert == Frage.iRichtige_Antwort) {
-                        antwort.richtig();
+                        Antwort.richtig();
                     } else {
-                        antwort.falsch();
+                        Antwort.falsch();
                     }
                 }
             });
@@ -114,10 +114,10 @@ public class gui {
                 public void actionPerformed(ActionEvent e) {
 
                     if (antwort4wert == Frage.iRichtige_Antwort) {
-                        antwort.richtig();
+                        Antwort.richtig();
 
                     } else {
-                        antwort.falsch();
+                        Antwort.falsch();
 
                     }
                 }

@@ -10,7 +10,7 @@ public class Login {
     static String v2;
 
     public static void selectLogin() {
-        main User = new main();
+        Main User = new Main();
         v1=User.sUser_Name_Eingabe;
         v2=User.sPasswort_Eingabe;
         String sqlSelectLogin = "SELECT * FROM benutzer WHERE User_Name LIKE '"+ v1 +"' AND Passwort LIKE '"+v2+"'";

@@ -3,9 +3,9 @@ public class Frage {
 
     }
     public static void neue_frage(){
-        mysql.maxID();
+        Mysql.maxID();
 
-        mysql.select();
+        Mysql.select();
         gui g = new gui();
     }
 }
